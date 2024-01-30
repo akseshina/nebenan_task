@@ -7,7 +7,7 @@
 
 <details>
   <summary>Replies Recieved</summary>
-  ![plot](3.2_replies_received_distribution)
+  ![plot](3.2_replies_received_distribution.png)
 </details>
 
 ## Heatmaps
