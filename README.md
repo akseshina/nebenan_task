@@ -2,7 +2,7 @@
 
 ## Additional Files for this Report
 
-1. [Jupyter Notebook](https://github.com/akseshina/nebenan_task) with code for analysis. The sections in the Jupyter Notebook correspond to the sections in this report.
+1. [Jupyter Notebook](https://github.com/akseshina/nebenan_task/blob/main/nebenan_task.ipynb) with code for analysis. The sections in the Jupyter Notebook correspond to the sections in this report.
 
 2. [Tableau Dashboard](https://public.tableau.com/app/profile/margarita.akseshina/viz/NebenanTask/Dashboard1) with some interactive visualizations, which were easier and faster to create in Tableau than in Python.
 
@@ -10,9 +10,9 @@
 
 Let's start by looking at the file. It contains information about 20,000 users.
 
-The fields contain a lot of Nulls. I assumed that in such cases, the user did not perform specific actions, and their count can be considered as 0. For further analysis, I replaced all Nulls in the dataset with zeros. I also saved this updated dataset to a new file to make it easier to visualize in Tableau. (See the "Fill the dataset with zeros instead of Nulls" section in [the Jupyter Notebook](https://github.com/akseshina/nebenan_task))
+The fields contain a lot of Nulls. I assumed that in such cases, the user did not perform specific actions, and their count can be considered as 0. For further analysis, I replaced all Nulls in the dataset with zeros. I also saved this updated dataset to a new file to make it easier to visualize in Tableau. (See the "Fill the dataset with zeros instead of Nulls" section in [the Jupyter Notebook](https://github.com/akseshina/nebenan_task/blob/main/nebenan_task.ipynb))
 
-I also checked that for each user, the metric value does not decrease with an increase in the length of the time frame. All data passed this check. (See the "Checking Metric Monotonicity" section in [the Jupyter Notebook](https://github.com/akseshina/nebenan_task))
+I also checked that for each user, the metric value does not decrease with an increase in the length of the time frame. All data passed this check. (See the "Checking Metric Monotonicity" section in [the Jupyter Notebook](https://github.com/akseshina/nebenan_task/blob/main/nebenan_task.ipynb))
 
 
 ### Outliers
@@ -36,6 +36,8 @@ All further analysis was conducted on these filtered data. These outliers would 
 Now, let's visualize the distribution of each metric as a normalized histogram. I do not show values greater than 7 on these histograms, as the number of active users with values greater than that decreases significantly. Thus, I cut off the long tails of the distributions and suggest focusing on their left side.
 
 On each graph, I also highlighted in purple the percentage of users for whom a particular metric is zero. From the histograms, we can see that the vast majority of users are not very active and may not perform any actions even in 12 weeks. Therefore, it is not advisable to choose values of X and Y for the criteria too high, as such behavior would be highly untypical given the current user activity.
+
+To avoid overloading the report with a large number of plots, you can expand and collapse each histogram set for each metric as needed.
 
 <details>
   <summary>Posts Created</summary>
@@ -123,3 +125,11 @@ Let's finalize the criteria that I visually showed in the previous section on th
 - Philanthropist: At least 3 items gifted on the marketplace in 8 weeks.
 - Helping Hand: At least 3 thankyou messages received in 6 weeks.
 - Local Guide: At least 3 places recommended in 8 weeks.
+
+In this table, you can see what percentage of users from the dataset will receive a badge or a set of badges given these criteria.
+
+![plot](plots/6_badges_percentage.png)
+
+As you can see, the percentage for each badge is quite small, and the number of people who would receive more than one badge is very few.
+
+Finally, I would like to emphasize again that the final decision on the criteria should be made depending on the product strategy, together with the team and the product manager, and my heatmaps with parameter iterations should help in this.
