@@ -9,6 +9,7 @@
 
 <details>
   <summary>Posts Created</summary>
+  
   ![plot](plots/3.1_posts_created_distribution.png)
 </details>
 
