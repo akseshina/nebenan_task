@@ -1,7 +1,14 @@
-# nebenan_task
+# Consulting on Gamification Badge Criteria for nebenan.de
 
 ## Outliers
 ![plot](plots/1_boxplots_raw_data.png)
+
+## Distributions
+
+<details>
+  <summary>Replies Recieved</summary>
+  ![plot](3.2_replies_received_distribution)
+</details>
 
 ## Heatmaps
 
