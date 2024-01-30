@@ -8,7 +8,7 @@
 
 ## Data overview
 
-Let's start by looking at the file. It contains information about 20,000 users.
+Let's start by looking at the file. It contains information about 20,000 users. Each user has at least one non-zero metric value.
 
 The fields contain a lot of Nulls. I assumed that in such cases, the user did not perform specific actions, and their count can be considered as 0. For further analysis, I replaced all Nulls in the dataset with zeros. I also saved this updated dataset to a new file to make it easier to visualize in Tableau. (See the "Fill the dataset with zeros instead of Nulls" section in [the Jupyter Notebook](https://github.com/akseshina/nebenan_task/blob/main/nebenan_task.ipynb))
 
@@ -21,7 +21,7 @@ Let's draw box plots for each metric, separately for each time interval.
 
 This method of visualization allows us to see outliers.
 
-On the graphs, I highlighted users who I consider outliers in red (I selected them manually using interactive Tableau plots). There are 10 such users.
+On the graphs, I highlighted in red users I consider outliers(I selected them manually using interactive Tableau plots). There are 10 such users.
 
 ![plot](plots/1_boxplots_raw_data.png)
 
@@ -88,7 +88,7 @@ So, how do we choose parameters for the criteria?
 
 ### Getting a badge should not be too easy
 
-On the previous histograms, we saw that the vast majority of users do not perform certain actions. However, if we choose the parameter X too low, for example, 1, it can devalue the badge. A user may not understand why they were awarded a badge if they did something only once (and perhaps even accidentally while testing the platform). Therefore, I suggest considering a minimum of 2 or 3 as X. The specific choice between these values should be discussed within the team, based on the product's philosophy and strategy. I chose a minimum of 3 for X, but this is just a preliminary suggestion, and I will show how we can evaluate other options.
+On the previous histograms, we saw that the vast majority of users do not perform certain actions. However, if we choose the parameter X too low (for example 1), it can devalue the badge. A user may not understand why they were awarded a badge if they did something only once (and perhaps even accidentally while testing the platform). Therefore, I suggest considering a minimum of 2 or 3 as X. The specific choice between these values should be discussed within the team, based on the product's philosophy and strategy. I chose a minimum of 3 for X, but this is just a preliminary suggestion, and I will show how we can evaluate other options.
 
 ### Two of the badges, besides parameters X and Z, also have a parameter Y
 
@@ -100,7 +100,7 @@ How can we determine if a particular criterion will be achievable for users? We 
 
 Let's go through all the parameter values within reasonable limits (for X and Y, I did not consider more than 7) and calculate this ratio. I visualized the results of this iteration in the form of a heatmap.
 
-For badges with two parameters, there is one heatmap.
+For badges with two parameters, there is one heatmap for each.
 
 ![plot](plots/4_badges_heatmaps_2_params.png)
 
