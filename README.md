@@ -10,9 +10,9 @@
 
 Let's start by looking at the file. It contains information about 20,000 users.
 
-The fields contain a lot of Nulls. I assumed that in such cases, the user did not perform specific actions, and their count can be considered as 0. For further analysis, I replaced all Nulls in the dataset with zeros. I also saved this updated dataset to a new file to make it easier to visualize in Tableau. (See the "Filling Nulls with Zeros" section in the notebook)
+The fields contain a lot of Nulls. I assumed that in such cases, the user did not perform specific actions, and their count can be considered as 0. For further analysis, I replaced all Nulls in the dataset with zeros. I also saved this updated dataset to a new file to make it easier to visualize in Tableau. (See the "Fill the dataset with zeros instead of Nulls" section in [the Jupyter Notebook](https://github.com/akseshina/nebenan_task))
 
-I also checked that for each user, the metric value does not decrease with an increase in the length of the time frame. All data passed this check. (See the "Checking Metric Monotonicity" section in the notebook)
+I also checked that for each user, the metric value does not decrease with an increase in the length of the time frame. All data passed this check. (See the "Checking Metric Monotonicity" section in [the Jupyter Notebook](https://github.com/akseshina/nebenan_task))
 
 
 ### Outliers
