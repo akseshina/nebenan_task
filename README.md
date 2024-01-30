@@ -1,3 +1,3 @@
 # nebenan_task
 
-![plot](plots/boxplots_raw_data.png)
+![plot](plots/1_boxplots_raw_data.png)
